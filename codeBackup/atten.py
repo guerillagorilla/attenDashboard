@@ -2,21 +2,19 @@
 
 import telnetlib
 import re
-#import sys
-
-#values = int(sys.argv[1])
 
 from __main__ import *
 
-def telNetCall():
-    global output
+def readAllAtten():
+    #global output
     host  = "172.30.0.100"
     telnet  = telnetlib.Telnet(host, 3001) 
 
     telnet.write('RAAE\n')
-    
     telnet.write('DIS\n')
     txt = telnet.read_all()
+
+    telnet.close()
 
     re1='.*?'		# Non-greedy match on filler
     re2='\\d+'		# Uninteresting: int
@@ -107,15 +105,17 @@ def telNetCall():
         
  	atten_str = int1+","+int2+","+int3+","+int4+","+int5+","+int6+","+int7+","+int8+","+int9+","+int10+","+int11+","+int12+","+int13+","+int14+","+int15+","+int16
         
-	values = atten_str.split(',')
+	attenValue = atten_str.split(',')
+    print attenValue
         
         #for x in output: 
 	    #return x
 
-	return values
+	#return attenValue
+    
+    #print output[0]
 
-        #return output[0]
+readAllAtten()
 
-telNetCall()
 
 

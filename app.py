@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
 from flask import Flask, render_template, request
-from atten import telNetCall 
+#from atten import readAllAtten
+from readAtten2 import readAtten
 
 # Initialize the Flask application
 app = Flask(__name__)
@@ -11,10 +12,10 @@ app = Flask(__name__)
 
 def index():
     
-    values = telNetCall()
+    attenValue = readAtten()
+    print attenValue
     
-    #return render_template('index.html', attenValue = output)
-    return render_template('index.html', attens=values)
+    return render_template('index.html', attens=attenValue)
 
 if __name__ == '__main__':
     app.debug = True
