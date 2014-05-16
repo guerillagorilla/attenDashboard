@@ -1,39 +1,130 @@
+
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}" />
 
-
-  <body>
-    <div class="container">
-      
-      <div class="header">
-        <h3 class="text-muted">Small Cell JFW Attenuator Control</h3>
-      </div>
-      <hr/>
-
-      <!--
-      <div id="slider2">
-        <label for="rangeinput">Attenuator:   12</label>
-        <input id="rangeinput" type="range" min="0" value={{attens}} max="127" step="1" onchange="rangeinput.value=value" />
-        <output id = "rangevalue">{{attens}}</output>
-      </div>
-      -->
-
-      <div id="testing">
-	<form>
-      <label for="rangeinput">Attenuator:2</label>
-	    <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens}} oninput="this.form.amountInput.value=this.value" />
-	    <input type="number" name="amountInput" min="0" max="127" value={{attens}} oninput="this.form.amountRange.value=this.value" />
-	</form>
-      </div>
-
-      <hr/>    
-      
-      </div>
+    <title>Small Cell JFW Attenuator Control</title>
     
-    </div>
-  </body>
-</html>
- 
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+
+    <body class="container">
+      <div class="container">
+        <form>
+          <label for="rangeinput">Attenuator: 1</label>
+  	      <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens1}} oninput="this.form.amountInput.value=this.value" />
+  	      <input type="number" name="amountInput" min="0" max="127" value={{attens1}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 2</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens2}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens2}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 3</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens3}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens3}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 4</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens4}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens4}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 5</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens5}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens5}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 6</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens6}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens6}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 7</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens7}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens7}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 8</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens8}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens2}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 9</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens9}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens9}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 10</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens10}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens10}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 11</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens11}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens11}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 12</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens12}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens12}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 13</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens13}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens13}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 14</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens14}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens14}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 15</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens15}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens15}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <form>
+          <label for="rangeinput">Attenuator: 16</label>
+          <input id="rangeinput" type="range" name="amountRange" min="0" max="127" value={{attens16}} oninput="this.form.amountInput.value=this.value" />
+          <input type="number" name="amountInput" min="0" max="127" value={{attens16}} oninput="this.form.amountRange.value=this.value" />
+        </form>
+
+        <hr/>    
+          
+      </div>
+
+          <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    </body>
+  </html>
+   
