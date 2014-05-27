@@ -7,19 +7,14 @@ import re
 #attenPort = int(sys.argv[1])
 #value = int(sys.argv[2])
 
-#from __main__ import *
+from __main__ import *
 
-def writeAtten(a,b):
+def writeAtten():
 
-    attenPort = a
-    value = b
-
-    print 'This: %d %d' % (attenPort, value)
-
-    host  = "172.30.0.100"
+    host  = "localhost"
     telnet  = telnetlib.Telnet(host, 3001) 
 
-    telnet.write('SAR%d %d\n' % (attenPort, value))
+    telnet.write('SAR1 10\n')
     telnet.write('DIS\n')
     txt = telnet.read_all()
 
@@ -42,9 +37,10 @@ def writeAtten(a,b):
     m = rg.search(txt)
     if m:
         attenValue=m.group(1)
-        #print attenValue
+        print attenValue
 
-	return attenValue
+	#return attenValue
 
 writeAtten()
+
 

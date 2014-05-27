@@ -14,12 +14,12 @@ def writeAtten(a,b):
     attenPort = a
     value = b
 
-    print 'This: %d %d' % (attenPort, value)
+    #print 'This: %s %s' % (attenPort, value)
 
     host  = "172.30.0.100"
     telnet  = telnetlib.Telnet(host, 3001) 
 
-    telnet.write('SAR%d %d\n' % (attenPort, value))
+    telnet.write('SAR%s %s\n' % (attenPort, value))
     telnet.write('DIS\n')
     txt = telnet.read_all()
 
@@ -46,5 +46,5 @@ def writeAtten(a,b):
 
 	return attenValue
 
-writeAtten()
+#writeAtten()
 
